@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package IgnorableNamespaces="build com desktop desktop4 desktop6 desktop9 mp rescap uap uap5" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4" xmlns:desktop6="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6" xmlns:desktop9="http://schemas.microsoft.com/appx/manifest/desktop/windows10/9" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5">
+  <Identity Name="Microsoft.OutlookForWindows" ProcessorArchitecture="x86" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.2024.403.0" />
+  <!-- resources, driven by makepri details. -->
+  <Resources>
+    <Resource uap:Scale="100" />
+    <Resource uap:Scale="125" />
+    <Resource uap:Scale="150" />
+    <Resource uap:Scale="200" />
+    <Resource uap:Scale="400" />
+    <Resource Language="en-us" />
+    <Resource Language="af" />
+    <Resource Language="am" />
+    <Resource Language="ar" />
+    <Resource Language="as-IN" />
+    <Resource Language="az-Latn-AZ" />
+    <Resource Language="bg" />
+    <Resource Language="bn-IN" />
+    <Resource Language="bs-Latn-BA" />
+    <Resource Language="ca" />
+    <Resource Language="ca-Es-VALENCIA" />
+    <Resource Language="cs" />
+    <Resource Language="cy" />
+    <Resource Language="da" />
+    <Resource Language="de" />
+    <Resource Language="el" />
+    <Resource Language="en" />
+    <Resource Language="en-GB" />
+    <Resource Language="es" />
+    <Resource Language="es-MX" />
+    <Resource Language="et" />
+    <Resource Language="eu" />
+    <Resource Language="fa" />
+    <Resource Language="fi" />
+    <Resource Language="fil" />
+    <Resource Language="fr" />
+    <Resource Language="fr-CA" />
+    <Resource Language="ga-IE" />
+    <Resource Language="gd-gb" />
+    <Resource Language="gl" />
+    <Resource Language="gu" />
+    <Resource Language="he" />
+    <Resource Language="hi" />
+    <Resource Language="hr" />
+    <Resource Language="hu" />
+    <Resource Language="hy" />
+    <Resource Language="id" />
+    <Resource Language="is" />
+    <Resource Language="it" />
+    <Resource Language="ja" />
+    <Resource Language="ka" />
+    <Resource Language="kk" />
+    <Resource Language="km-KH" />
+    <Resource Language="kn" />
+    <Resource Language="ko" />
+    <Resource Language="kok" />
+    <Resource Language="lb-LU" />
+    <Resource Language="lo-LA" />
+    <Resource Language="lt" />
+    <Resource Language="lv" />
+    <Resource Language="mi-NZ" />
+    <Resource Language="mk" />
+    <Resource Language="ml" />
+    <Resource Language="mr" />
+    <Resource Language="ms" />
+    <Resource Language="mt-MT" />
+    <Resource Language="ne-NP" />
+    <Resource Language="nl" />
+    <Resource Language="nn-NO" />
+    <Resource Language="no" />
+    <Resource Language="or" />
+    <Resource Language="pa-IN" />
+    <Resource Language="pl" />
+    <Resource Language="pt" />
+    <Resource Language="pt-PT" />
+    <Resource Language="quz-PE" />
+    <Resource Language="ro" />
+    <Resource Language="ru" />
+    <Resource Language="sk" />
+    <Resource Language="sl" />
+    <Resource Language="sq" />
+    <Resource Language="sr-Cyrl" />
+    <Resource Language="sr-Cyrl-BA" />
+    <Resource Language="sv" />
+    <Resource Language="ta" />
+    <Resource Language="te" />
+    <Resource Language="th" />
+    <Resource Language="tr" />
+    <Resource Language="ug-CN" />
+    <Resource Language="uk" />
+    <Resource Language="ur" />
+    <Resource Language="vi" />
+    <Resource Language="zh-Hans" />
+    <Resource Language="zh-Hant" />
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="unvirtualizedResources" />
+    <rescap:Capability Name="packageManagement" />
+    <rescap:Capability Name="internetClient" />
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+    <DisplayName>FUCK NO!</DisplayName>
+	<Logo>logo.png</Logo>
+    <desktop6:RegistryWriteVirtualization>disabled</desktop6:RegistryWriteVirtualization>
+    <desktop6:FileSystemWriteVirtualization>disabled</desktop6:FileSystemWriteVirtualization>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="olk.exe" Id="Microsoft.OutlookforWindows">
+      <uap:VisualElements AppListEntry="none" BackgroundColor="transparent" Description="Microsoft Outlook" DisplayName="Outlook (new)" Square150x150Logo="Assets\MedTile.png" Square44x44Logo="Assets\AppList.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\SmallTile.png" Wide310x150Logo="Assets\WideTile.png" Square310x310Logo="Assets\LargeTile.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.22621.2283" MinVersion="10.0.17763.0" Name="Windows.Desktop" />
+  </Dependencies>
+  <mp:PhoneIdentity PhoneProductId="9107c2c7-3c19-42b5-af45-0fc77c77cba8" PhonePublisherId="95d94207-0c7c-47ed-82db-d75c81153c35" />
+</Package>
