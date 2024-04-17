@@ -5,7 +5,7 @@ This script prevents the Outlook (new) app from installing by installing a custo
 How to use it?
 ==============
 1. Unpack the ZIP file (if you didn´t already)
-2 Run the outlook.bat batch file as an Admin
+2. Run the outlook.bat batch file as an Admin
 3. DONE! You can now remove the files
 
 How exactly does it work?
