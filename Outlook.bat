@@ -12,9 +12,9 @@
     )
 
 mkdir %appdata%\NewOutlook
-if %PROCESSOR_ARCHITECTURE%==AMD64 copy AppxManifest.xml %appdata%\NewOutlook
-if %PROCESSOR_ARCHITECTURE%==x86 copy AppxManifestx86.xml %appdata%\NewOutlook\AppxManifest.xml
-if %PROCESSOR_ARCHITECTURE%==ARM64 copy AppxManifest-ARM64.xml %appdata%\NewOutlook\AppxManifest.xml
+if %PROCESSOR_ARCHITECTURE%==AMD64 copy "%~dp0AppxManifest.xml" %appdata%\NewOutlook
+if %PROCESSOR_ARCHITECTURE%==x86 copy "%~dp0AppxManifestx86.xml" %appdata%\NewOutlook\AppxManifest.xml
+if %PROCESSOR_ARCHITECTURE%==ARM64 copy "%~dp0AppxManifest-ARM64.xml" %appdata%\NewOutlook\AppxManifest.xml
 powershell "New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -PropertyType DWORD -Value 1 -Force" >NUL 2>NUL
 echo Uninstalling the original version (reffer to readme for errors/red text)
 powershell "get-appxpackage -allusers Microsoft.OutlookForWindows | Remove-AppxPackage -allusers"
