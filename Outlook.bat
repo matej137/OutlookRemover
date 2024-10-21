@@ -1,15 +1,8 @@
 @echo off
 :check_Permissions
-    echo Administrative permissions required. Detecting permissions...
-    
-    net session >nul 2>&1
-    if %errorLevel% == 0 (
-        echo Success: Administrative permissions confirmed.
-    ) else (
-        echo Failure: You need to run this as Admin!!!
-		pause
-		goto koniec
-    )
+::# self elevate with native shell by AveYo
+>nul reg add hkcu\software\classes\.Admin\shell\runas\command /f /ve /d "cmd /x /d /r set \"f0=%%2\"& call \"%%2\" %%3"& set _= %*
+>nul fltmc|| if "%f0%" neq "%~f0" (cd.>"%temp%\runas.Admin" & start "%~n0" /high "%temp%\runas.Admin" "%~f0" "%_:"=""%" & exit /b)
 
 mkdir %appdata%\NewOutlook
 if %PROCESSOR_ARCHITECTURE%==AMD64 copy "%~dp0AppxManifest.xml" %appdata%\NewOutlook
@@ -21,5 +14,6 @@ powershell "get-appxpackage -allusers Microsoft.OutlookForWindows | Remove-AppxP
 echo installing the patched one (Errors are bad now)
 powershell add-appxpackage -register "%appdata%\NewOutlook\AppxManifest.xml"
 echo Done!
-
-:koniec
+echo .
+echo Press any key to close this window
+pause
