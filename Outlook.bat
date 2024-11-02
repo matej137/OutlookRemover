@@ -12,7 +12,7 @@ powershell "New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersi
 echo Uninstalling the original version (reffer to readme for errors/red text)
 powershell "get-appxpackage -allusers Microsoft.OutlookForWindows | Remove-AppxPackage -allusers"
 echo installing the patched one (Errors are bad now)
-powershell add-appxpackage -register "%appdata%\NewOutlook\AppxManifest.xml"
+powershell add-appxpackage -register "'%appdata%\NewOutlook\AppxManifest.xml'"
 echo Done!
 echo .
 echo Press any key to close this window
